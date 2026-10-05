@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "google-hotels-scraper": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@apify/actors-mcp-server",
+        "--tools",
+        "automationnation/google-hotels-scraper"
+      ],
+      "env": {
+        "APIFY_TOKEN": "YOUR_APIFY_TOKEN"
+      }
+    }
+  }
+}
