@@ -26,6 +26,16 @@ Google Hotels Scraper is an Apify Actor that returns Google Hotels results for a
 }
 ```
 
+## Hotel price tracker (price drops)
+
+Schedule a search for your city and dates with `"onlyPriceDrops": true`: each run saves a hotel only when its nightly price is lower than the last price seen for it, with `previousPricePerNight` on the row. Up to 500 hotels are remembered per search.
+
+```json
+{ "locations": ["Lisbon"], "checkIn": "2026-12-18", "checkOut": "2026-12-21", "minRating": "4", "onlyPriceDrops": true }
+```
+
+Ready-made: [n8n workflow: hotel price drops to Slack](https://github.com/retracn/n8n-apify-templates/blob/main/hotel-price-drops-to-slack.json) · [guide: hotel price tracker](https://retracn.github.io/automationnation-actors/guides/hotel-price-tracker/) · [public task: New York for New Year's Eve](https://apify.com/automationnation/google-hotels-scraper/tasks/hotel-price-tracker-new-york-new-years-eve)
+
 ## Run it from code
 
 **REST API**
