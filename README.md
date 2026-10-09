@@ -12,6 +12,7 @@ Google Hotels Scraper is an Apify Actor that returns Google Hotels results for a
 - Set check-in, check-out and adults for exact prices.
 - 20 hotels per search in seconds, plain HTTP.
 - Price: $1 per 1,000 hotels.
+- Hotel price tracker: with Only price drops on, a scheduled run saves a hotel only when its nightly price is lower than the last price seen for it (up to 500 hotels remembered per search), with the previous price on the row.
 
 ## Example input
 
@@ -107,6 +108,9 @@ Google's Hotel APIs are for hotel partners managing their own prices; there's no
 
 **How many hotels per search?**
 Up to 20; use neighbourhood or star-rating searches to cover a city.
+
+**Can it track hotel prices for my dates?**
+Yes. Schedule a search for your city and dates with Only price drops on: each run saves only hotels whose nightly price dropped, with the previous price, ready for Slack, email or a webhook.
 
 ## More from AutomationNation
 
